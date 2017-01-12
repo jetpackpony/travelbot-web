@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MessageList from './MessageList';
 import ChatForm from './ChatForm';
 
-const WS_ADDRESS = "ws://localhost:5000/";
+const WS_ADDRESS = "wss://travelobot.herokuapp.com/";
 
 class Chat extends Component {
   constructor(props) {
