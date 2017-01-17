@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ChatForm.scss';
 
 class ChatForm extends Component {
   constructor(props) {
@@ -20,14 +21,13 @@ class ChatForm extends Component {
 
   render() {
     return (
-      <div className="Form">
+      <div className="chat-form">
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
             value={this.state.value}
             onChange={this.handleChange}
           />
-          <button type="submit">Send</button>
         </form>
       </div>
     );

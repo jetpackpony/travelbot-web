@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MessageList from './MessageList';
 import ChatForm from './ChatForm';
+import './Chat.scss';
 
 const WS_ADDRESS = "wss://travelobot.herokuapp.com/";
 
