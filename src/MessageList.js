@@ -1,5 +1,6 @@
 import React from 'react';
 import Message from './Message';
+import SelectOptions from './SelectOptions';
 import './MessageList.scss';
 
 export default function (props) {
@@ -13,9 +14,14 @@ export default function (props) {
     );
   });
 
+  const lastMessage = props.messages[props.messages.length - 1];
+  const options = lastMessage ? lastMessage.options : null;
+
   return (
     <div className="message-list">
       {messageList}
+      {lastMessage && lastMessage.type === "select" ?
+          <SelectOptions options={options} /> : null }
     </div>
   );
 }
