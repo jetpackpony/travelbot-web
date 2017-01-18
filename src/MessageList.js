@@ -21,7 +21,7 @@ export default function (props) {
     <div className="message-list">
       {messageList}
       {lastMessage && lastMessage.type === "select" ?
-          <SelectOptions options={options} /> : null }
+          <SelectOptions options={options} handleClick={props.handleSelectOption} /> : null }
     </div>
   );
 }

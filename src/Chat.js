@@ -11,6 +11,7 @@ class Chat extends Component {
     this.user = { id: 1, name: 'Me' };
     this.state = { messages: [] };
     this.handleMessage = this.handleMessage.bind(this);
+    this.handleSelectOption = this.handleSelectOption.bind(this);
   }
 
   pushMessage(msg) {
@@ -33,10 +34,23 @@ class Chat extends Component {
     this.socket.send(msg);
   }
 
+  handleSelectOption(opt) {
+    this.pushMessage({
+      type: "text",
+      user: this.user,
+      label: opt.name
+    });
+    this.socket.send(opt.id);
+  }
+
   render() {
     return (
       <div className="Chat">
-        <MessageList messages={this.state.messages} thisUser={this.user} />
+        <MessageList
+          messages={this.state.messages}
+          thisUser={this.user}
+          handleSelectOption={this.handleSelectOption}
+        />
         <ChatForm handleMessage={this.handleMessage} />
       </div>
     );
