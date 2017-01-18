@@ -1,4 +1,5 @@
 import React from 'react';
+import './SelectOptions.scss';
 
 export default function(props) {
   if (!props.options) {
@@ -12,7 +13,7 @@ export default function(props) {
   });
 
   return (
-    <div className="options-list">
+    <div className="select-options">
       {options}
     </div>
   )

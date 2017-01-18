@@ -1,0 +1,12 @@
+.select-options {
+  padding: 1em 0;
+
+  .option {
+    display: inline-block;
+    padding: .5em;
+    border: 1px solid rgba(0, 0, 255, .2);
+    border-radius: 1em;
+    cursor: pointer;
+    margin: .5em;
+  }
+}
