@@ -1,6 +1,14 @@
+@import 'variables';
+
 .message-list {
+  background-color: rgba(#000, 0.08);
+
   position: absolute;
-  bottom: 2em;
+  bottom: $message-line-height;
   top: 0;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }

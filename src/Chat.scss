@@ -1,4 +1,4 @@
-$chat-max-width: 30em;
+@import 'variables';
 
 body {
   margin: 0;
@@ -6,7 +6,6 @@ body {
 
 .Chat {
   max-width: $chat-max-width;
-  background-color: #ddddf3;
   position: absolute;
   top: 0;
   bottom: 0;
