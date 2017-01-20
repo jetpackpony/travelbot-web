@@ -3,8 +3,17 @@ import MessageList from './MessageList';
 import ChatForm from './ChatForm';
 import './Chat.scss';
 
-const protocol = document.location.protocol === "https:" ? "wss" : "ws";
-const WS_ADDRESS = `${protocol}://travelobot.herokuapp.com/`;
+const WS_ADDRESS = getServerURL();
+
+function getServerURL() {
+  const protocol = document.location.protocol === "https:" ? "wss" : "ws";
+  switch(process.env.NODE_ENV) {
+    case 'production':
+      return `${protocol}://travelobot.herokuapp.com/`;
+    default:
+      return `${protocol}://localhost:5000/`;
+  }
+}
 
 class Chat extends Component {
   constructor(props) {
