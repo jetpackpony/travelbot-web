@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MessageList from './MessageList';
 import ChatForm from './ChatForm';
+import mockServer from './mockServer/mockServer';
 import './Chat.scss';
 
 const WS_ADDRESS = getServerURL();
@@ -13,6 +14,10 @@ function getServerURL() {
     default:
       return `${protocol}://localhost:5000/`;
   }
+}
+
+if (process.env.NODE_ENV === 'development') {
+  mockServer(WS_ADDRESS);
 }
 
 class Chat extends Component {
