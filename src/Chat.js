@@ -2,19 +2,10 @@ import React, { Component } from 'react';
 import MessageList from './MessageList';
 import ChatForm from './ChatForm';
 import mockServer from './mockServer/mockServer';
+import getServerURL from './getServerURL';
 import './Chat.scss';
 
 const WS_ADDRESS = getServerURL();
-
-function getServerURL() {
-  const protocol = document.location.protocol === "https:" ? "wss" : "ws";
-  switch(process.env.NODE_ENV) {
-    case 'production':
-      return `${protocol}://travelobot.herokuapp.com/`;
-    default:
-      return `${protocol}://localhost:5000/`;
-  }
-}
 
 if (process.env.NODE_ENV === 'development') {
   mockServer(WS_ADDRESS);
