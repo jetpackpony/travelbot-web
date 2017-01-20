@@ -3,7 +3,8 @@ import MessageList from './MessageList';
 import ChatForm from './ChatForm';
 import './Chat.scss';
 
-const WS_ADDRESS = "wss://travelobot.herokuapp.com/";
+const protocol = document.location.protocol === "https:" ? "wss" : "ws";
+const WS_ADDRESS = `${protocol}://travelobot.herokuapp.com/`;
 
 class Chat extends Component {
   constructor(props) {
