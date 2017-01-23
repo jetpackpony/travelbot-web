@@ -1,6 +1,7 @@
 export default {
-  "type":"none",
-  "label":{
+  "type":"results",
+  "label":"Here are the cheapest flights from Saint-Petersburg, Russia to Bangkok, Thailand for 19 march 2017",
+  "flights":{
     "from":{
       "Id":5227,
       "ParentId":191,
