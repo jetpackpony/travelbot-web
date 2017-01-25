@@ -1,5 +1,23 @@
+@import 'variables';
+
 .chat-form {
   position: absolute;
   bottom: 0;
-  height: 2em;
+  height: $message-line-height;
+  left: 0;
+  right: 0;
+
+  form {
+    height: 100%;
+  }
+
+  input {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    border: none;
+    padding: 0 1em;
+    line-height: 1em;
+    font-size: 1em;
+  }
 }

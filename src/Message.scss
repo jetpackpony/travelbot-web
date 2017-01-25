@@ -1,0 +1,30 @@
+.message {
+  margin: 0.5em;
+
+  &.message-mine {
+    text-align: right;
+  }
+}
+
+$robot-size: 2em;
+
+.robot-face {
+  width: $robot-size;
+  height: $robot-size;
+  display: inline-block;
+  vertical-align: bottom;
+  border-radius: 50%;
+  margin-right: .5em;
+  background-image: url(./robot-face.jpg);
+  background-size: cover;
+}
+
+.message-inner {
+  max-width: 50%;
+  padding: 1em;
+  background-color: white;
+  border: 1px solid rgba(#000, .2);
+  border-radius: 1em;
+  display: inline-block;
+}
+
