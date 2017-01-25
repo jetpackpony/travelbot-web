@@ -10,7 +10,7 @@ export default function(props) {
       </div>
       <FlightDetails flight={flight} />
       <div className="buy-button">
-        <a href={flight.deeplink}>Buy for {flight.price}</a>
+        <a href={flight.deeplink}>Buy for ${Math.ceil(flight.price)}</a>
       </div>
     </div>
   );
